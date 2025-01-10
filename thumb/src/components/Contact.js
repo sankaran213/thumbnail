@@ -21,8 +21,8 @@ export function Contact() {
         team.
       </p>
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <button className="bg-[#FF4800] hover:bg-[#FF4800]/90 text-white py-2 px-6 rounded-md">
-          Contact us
+        <button className="relative px-6 py-2 rounded-full text-white bg-[#FF4800] transition-transform duration-200 active:scale-95 custom-button">
+          Contact Us
         </button>
       </motion.div>
     </motion.section>

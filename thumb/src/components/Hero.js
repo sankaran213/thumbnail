@@ -50,7 +50,7 @@ export function Hero() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <img
-              src="/placeholder.svg"
+              src="https://a.storyblok.com/f/262429/1280x1920/07372621d1/digital-design.jpg/m/"
               alt={`Thumbnail ${i + 1}`}
               className="object-cover transition-transform group-hover:scale-110 w-full h-full"
             />
