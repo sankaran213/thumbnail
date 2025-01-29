@@ -14,6 +14,16 @@ const staggerChildren = {
   },
 };
 
+// Array of different image URLs
+const images = [
+  "Gen Z.png",
+  "Artboard 1.png",
+  "Artboard 2.png",
+  "Crime.png",
+  "Pollution.png",
+  "Unleash yr hero.png",
+];
+
 export function Hero() {
   const heroRef = useRef(null);
   const thumbnailsRef = useRef(null);
@@ -29,11 +39,11 @@ export function Hero() {
       variants={fadeIn}
     >
       <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-12">
-        GET YOUR HIGH-RES
-        <br />
-        THUMBNAIL HERE
+        Thumbnails designed with one goal
       </h1>
-
+      <h2 className="text-xl md:text-4xl lg:text-4xl font-bold leading-tight mb-12">
+        To Help Your Channel Succeed
+      </h2>
       <motion.div
         ref={thumbnailsRef}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-20"
@@ -41,7 +51,7 @@ export function Hero() {
         initial="hidden"
         animate={isThumbnailsInView ? "visible" : "hidden"}
       >
-        {[...Array(6)].map((_, i) => (
+        {images.map((image, i) => (
           <motion.div
             key={i}
             variants={fadeIn}
@@ -50,7 +60,7 @@ export function Hero() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <img
-              src="https://a.storyblok.com/f/262429/1280x1920/07372621d1/digital-design.jpg/m/"
+              src={image}
               alt={`Thumbnail ${i + 1}`}
               className="object-cover transition-transform group-hover:scale-110 w-full h-full"
             />

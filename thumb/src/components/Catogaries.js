@@ -10,13 +10,13 @@ const initialThumbnails = [
   {
     category: "Horror",
     title: "The Haunted Amity Mansion Forest | Horror Story | By Neels Barrett",
-    image: "/horror-thumbnail.png",
+    image: "Crime.png",
   },
   {
     category: "Documentary",
     title:
       "How this terrorist killing Indians yet NOBODY can stop it | ft. Air Pollution",
-    image: "/documentary-thumbnail.png",
+    image: "Unleash yr hero.png",
   },
 ];
 
@@ -24,12 +24,12 @@ const additionalThumbnails = [
   {
     category: "Self-Growth",
     title: "10 Steps to Unlock Your Potential | By John Doe",
-    image: "/self-growth-thumbnail.png",
+    image: "Gen Z.png",
   },
   {
     category: "Video Editing",
     title: "Step by Step | Video Editing Tips | By Jane Smith",
-    image: "/video-editing-thumbnail.png",
+    image: "Artboard 1.png",
   },
 ];
 
@@ -45,34 +45,11 @@ export function Categories() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        SOME THUMBNAILS
+        CREATIVITY IN ACTION
       </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {initialThumbnails.map((thumbnail, i) => (
-          <motion.div
-            key={thumbnail.category}
-            variants={fadeIn}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.2 }}
-          >
-            <h3 className="mb-4 text-xl font-semibold">{thumbnail.category}</h3>
-            <motion.div className="relative aspect-video rounded-lg overflow-hidden hover:scale-105 transition-transform">
-              <img
-                src="https://a.storyblok.com/f/262429/1280x1920/07372621d1/digital-design.jpg/m/"
-                alt={`${thumbnail.category} thumbnail`}
-                className="object-cover w-full h-full"
-                style={{ filter: "blur(2px)" }}
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white font-semibold text-lg">
-                {thumbnail.title}
-              </div>
-            </motion.div>
-          </motion.div>
-        ))}
-        {showMore &&
-          additionalThumbnails.map((thumbnail, i) => (
+        {[...initialThumbnails, ...(showMore ? additionalThumbnails : [])].map(
+          (thumbnail, i) => (
             <motion.div
               key={thumbnail.category}
               variants={fadeIn}
@@ -85,18 +62,16 @@ export function Categories() {
                 {thumbnail.category}
               </h3>
               <motion.div className="relative aspect-video rounded-lg overflow-hidden hover:scale-105 transition-transform">
+                {/* Image without blur */}
                 <img
                   src={thumbnail.image}
                   alt={`${thumbnail.category} thumbnail`}
                   className="object-cover w-full h-full"
-                  style={{ filter: "blur(2px)" }}
                 />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white font-semibold text-lg">
-                  {thumbnail.title}
-                </div>
               </motion.div>
             </motion.div>
-          ))}
+          )
+        )}
       </div>
       <motion.div
         className="flex flex-col sm:flex-row justify-center items-center mt-8 gap-2"

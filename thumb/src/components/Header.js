@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Logo from "./LogoMark.png";
 
 export function Header() {
   return (
@@ -11,7 +10,7 @@ export function Header() {
       className="fixed top-0 left-0 right-0 bg-white/60 backdrop-blur-md z-50 flex justify-between items-center px-6 py-4"
     >
       <div className="flex items-center">
-        <img src={Logo} alt="YouPro Logo" width={100} height={40} />
+        <img src="LogoMark.png" alt="YouPro Logo" width={80} height={30} />
       </div>
       <nav className="flex items-center gap-6">
         <motion.a
