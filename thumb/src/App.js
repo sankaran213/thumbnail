@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow space-y-4">
+      <main className="flex-grow space-y-2">
         {" "}
         {/* Reduced spacing */}
         <Hero />
