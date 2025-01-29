@@ -14,7 +14,15 @@ export function Header() {
       </div>
       <nav className="flex items-center gap-6">
         <motion.a
-          href="#work"
+          href="/"
+          className="text-gray-700 hover:text-[#FF4800] transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Home
+        </motion.a>
+        <motion.a
+          href="/work"
           className="text-gray-700 hover:text-[#FF4800] transition-colors"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
