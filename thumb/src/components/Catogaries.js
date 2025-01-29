@@ -86,9 +86,14 @@ export function Categories() {
         >
           {showMore ? "SHOW LESS" : "SEE ALL"}
         </button>
-        <button className="relative px-4 py-3 rounded-full text-white bg-[#FF4800] transition-transform duration-200 active:scale-95 custom-button">
-          Contact us
-        </button>
+        <a
+          href="https://calendly.com/tushardodesigns/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative px-4 py-3 rounded-full text-white bg-[#FF4800] transition-transform duration-200 active:scale-95 custom-button"
+        >
+          Contact Us
+        </a>
       </motion.div>
     </section>
   );

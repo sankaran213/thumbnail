@@ -21,9 +21,14 @@ export function Contact() {
         team.
       </p>
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <button className="relative px-6 py-2 rounded-full text-white bg-[#FF4800] transition-transform duration-200 active:scale-95 custom-button">
+        <a
+          href="https://calendly.com/tushardodesigns/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative px-6 py-2 rounded-full text-white bg-[#FF4800] transition-transform duration-200 active:scale-95 custom-button"
+        >
           Contact Us
-        </button>
+        </a>
       </motion.div>
     </motion.section>
   );
