@@ -6,18 +6,15 @@ import { Testimonials } from "./components/Testemonial";
 import { FAQ } from "./components/FAQ";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import { Loader } from "./components/Loader"; // Import the loader
+import { Loader } from "./components/Loader";
 import { useState, useEffect } from "react";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a delay for loading
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000); // Adjust the delay as needed
-    return () => clearTimeout(timer); // Cleanup the timer on unmount
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
@@ -29,9 +26,11 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <main>
+      <main className="flex-grow space-y-4">
+        {" "}
+        {/* Reduced spacing */}
         <Hero />
         <Categories />
         <Testimonials />

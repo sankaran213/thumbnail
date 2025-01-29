@@ -37,7 +37,7 @@ export function Categories() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <section className="px-6 py-12 max-w-6xl mx-auto">
+    <section className="px-6 py-2 max-w-6xl mx-auto -mt-12">
       <motion.h2
         className="text-5xl font-bold mb-8 text-center"
         variants={fadeIn}

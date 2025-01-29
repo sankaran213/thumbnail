@@ -33,15 +33,15 @@ export function Hero() {
   return (
     <motion.section
       ref={heroRef}
-      className="text-center py-32 px-4 mt-16"
+      className="text-center py-32 px-4 mt-2"
       initial="hidden"
       animate={isHeroInView ? "visible" : "hidden"}
       variants={fadeIn}
     >
       <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-12">
-        Thumbnails designed with one goal
+        THUMBNAIL DESIGNED WITH ONE GOAL
       </h1>
-      <h2 className="text-xl md:text-4xl lg:text-4xl font-bold leading-tight mb-12">
+      <h2 className="text-xl md:text-4xl lg:text-4xl font-bold leading-tight mb-8 -mt-6">
         To Help Your Channel Succeed
       </h2>
       <motion.div

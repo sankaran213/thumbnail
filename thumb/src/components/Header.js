@@ -7,7 +7,7 @@ export function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 100 }}
-      className="fixed top-0 left-0 right-0 bg-white/60 backdrop-blur-md z-50 flex justify-between items-center px-6 py-4"
+      className="fixed top-0 left-0 right-0 bg-white/60 backdrop-blur-md z-50 flex justify-between items-center px-6 py-2"
     >
       <div className="flex items-center">
         <img src="Primary Logo.png" alt="YouPro Logo" width={200} height={40} />
